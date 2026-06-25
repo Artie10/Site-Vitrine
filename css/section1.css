@@ -1,0 +1,144 @@
+.menu__section {
+  min-height: 100vh;
+  padding-top: 100px;
+
+  background-image:
+    linear-gradient(rgba(10, 15, 35, 0.6), rgba(10, 15, 35, 0.6)),
+    url("../images/building.png");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 0 5rem;
+}
+
+.text__principale {
+  max-width: 8500px;
+}
+
+.text__principale h1 {
+  color: white;
+  font-size: 6rem;
+  line-height: 1;
+  font-weight: 60;
+}
+
+.text__principale span {
+  display: block;
+  color: #c89b5d;
+}
+
+.text__principale p {
+  margin-top: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: 1.2rem;
+  line-height: 1.8;
+
+  max-width: 700px;
+  font-weight: 400;
+}
+
+.btn-item {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-room {
+  background: white;
+  color: #1d2746;
+}
+
+.btn-room:hover {
+  transform: translateY(-3px);
+}
+
+.btn-box {
+  background: #c89b5d;
+  color: white;
+}
+
+.btn-box:hover {
+  transform: translateY(-3px);
+}
+.btn-item img {
+  width: 20px;
+}
+
+@media (max-width: 1024px) {
+  .menu__section {
+    padding: 0 3rem;
+  }
+
+  .text__principale h1 {
+    font-size: 5rem;
+  }
+
+  .text__principale p {
+    font-size: 1.1rem;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu__section {
+    padding: 0 2rem;
+  }
+
+  .text__principale {
+    max-width: 100%;
+  }
+
+  .text__principale h1 {
+    font-size: 4rem;
+  }
+
+  .btn-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    padding: 0.9rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu__section {
+    padding: 0 1.25rem;
+  }
+
+  .text__principale h1 {
+    font-size: 3rem;
+  }
+
+  .text__principale p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .btn {
+    font-size: 0.95rem;
+  }
+
+  .btn-item img {
+    width: 18px;
+  }
+}

@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/nav.css" />
+  <link rel="stylesheet" href="./css/section1.css" />
+  <link rel="stylesheet" href="./css/section2.css" />
+  <link rel="stylesheet" href="./css/section3.css" />
+  <link rel="stylesheet" href="./css/section4.css" />
+  <link rel="stylesheet" href="./css/section5.css" />
+  <link rel="stylesheet" href="./css/section6.css" />
+  <link rel="stylesheet" href="./css/animation.css" />
+  <title>Z&A</title>
+</head>
+
+<body>
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="nav__logo">
+        <img src="./images/hotel-solid.png" alt="" />
+
+        <div class="logo-text">
+          <h3>Z&A PLAZA</h3>
+          <span>ANTSIRABE</span>
+        </div>
+      </a>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#hotel" class="nav__link">Hotels</a>
+          </li>
+          <li class="nav__item">
+            <a href="#box" class="nav__link">Box</a>
+          </li>
+          <li class="nav__item">
+            <a href="#note" class="nav__link">Avis clients</a>
+          </li>
+
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">Contact</a>
+          </li>
+        </ul>
+        <div class="nav__close" id="nav-close">
+          ✕
+        </div>
+      </div>
+      <div class="button-item">
+        <button class="btn btn-box" onclick="window.location.href='#box'">
+          Louer un local
+        </button>
+        <button class="btn btn-room" onclick="window.location.href='#hotel'">
+          Réserver une chambre
+        </button>
+      </div>
+      <div class="nav__toggle" id="nav-toggle">☰</div>
+    </nav>
+  </header>
+
+  <main class="menu">
+    <section class="menu__section hidden" id="home">
+      <div class="text__principale">
+        <h1>
+          Créez votre quotidien,
+          <span>Boostez votre activité</span>
+        </h1>
+
+        <p>
+          Louez une chambre tout confort pour vos séjours ou installez votre
+          activité dans l'un de nos box commerciaux idéalement situés. Le lieu
+          parfait pour vos séjours d'affaires ou vos activités commerciales.
+        </p>
+      </div>
+
+      <div class="btn-item">
+        <button class="btn btn-room" onclick="window.location.href='#hotel'">
+          <img src="./images/bed-solid.png" alt="" />&nbsp;&nbsp;Réserver une
+          chambre
+        </button>
+
+        <button class="btn btn-box" onclick="window.location.href='#box'">
+          <img src="./images/hotel-solid.png" alt="" />&nbsp;&nbsp;&nbsp;Louer un
+          local
+        </button>
+      </div>
+    </section>
+    <section class="hotel__section hidden" id="hotel">
+      <div class="presentation">
+
+        <h2>
+
+          Votre espace de repos,<br />
+          <span>pensé pour votre bien-être</span>
+        </h2>
+
+        <p>
+          Profitez d'un cadre calme et chaleureux, pensé pour votre bien-être.
+          Nos chambres entièrement équipées vous accueillent dans un
+          environnement propice au repos et à la détente.
+        </p>
+      </div>
+
+      <div class="hotel__navigation" id="photos">
+        <div class="room__card" data-room="standard">
+          <span class="room__number">101</span>
+
+          <span class="room__type">Chambre Standard</span>
+
+          <h3>Chambre standard</h3>
+
+          <p>2ème Étage · 24 m²</p>
+
+          <h4 class="room__price">30.000 <span>/ nuit</span></h4>
+        </div>
+
+        <div class="room__card" data-room="deluxe">
+          <span class="room__number">201</span>
+
+          <span class="room__type">Deluxe</span>
+
+          <h3>Chambre Deluxe</h3>
+
+          <p>4ème Étage · 42 m²</p>
+
+          <h4 class="room__price">50.000Ar <span>/nuit</span></h4>
+        </div>
+
+        <div class="room__card active" data-room="premium">
+          <span class="room__number">301</span>
+
+          <span class="room__type">Premium</span>
+
+          <h3>Chambre premium</h3>
+
+          <p>6ème Étage · 68 m²</p>
+
+          <h4 class="room__price">100.000Ar <span>/nuit</span></h4>
+        </div>
+      </div>
+      </div>
+      <div class="hotel__mobile-nav">
+
+        <select id="room-select">
+
+          <option value="standard">Classic Room</option>
+
+          <option value="deluxe">Deluxe Suite</option>
+
+          <option value="premium">Executive Suite</option>
+
+        </select>
+
+      </div>
+      <div class="hotel__content">
+
+        <!-- STANDARD -->
+        <div class="room-content room__standard">
+
+          <div class="img__standard"></div>
+
+          <div class="text__premium">
+            <h2>Chambre Simple</h2>
+
+            <p>
+              Une chambre moderne, lumineuse et optimisée,offrant tout le confort essentiel pour un séjour agréable.
+            </p>
+
+            <ul class="room__features">
+              <li>Wi-Fi </li>
+              <li>Lit double</li>
+              <li>Smart TV</li>
+              <li>salle de bain privée</li>
+            </ul>
+
+
+            <div class="price__premium">
+              <h3 class="room__price">
+                30.000 Ar <span>/ nuit</span>
+              </h3>
+              <button class="btn btn-book" data-room="standard" data-type="hotel"
+                data-name="Chambre Standard">Réserver</button>
+            </div>
+          </div>
+
+
+
+
+        </div>
+
+        <!-- DELUXE -->
+        <div class="room-content room__deluxe">
+          <div class="img__deluxe"></div>
+
+          <div class="text__premium">
+            <h2>Chambre Deluxe</h2>
+
+            <p>
+              Plus spacieuse, elle dispose d'un mobilier élégant en bois,
+              d'un grand dressing et
+              un espace de travail haut de gamme.
+            </p>
+
+            <ul class="room__features">
+              <li>Wi-Fi gratuit</li>
+              <li>Climatisation</li>
+              <li>Smart TV</li>
+              <li>Bureau</li>
+            </ul>
+
+
+            <div class="price__premium">
+              <h3 class="room__price">
+                50.000 Ar <span>/nuit</span>
+              </h3>
+              <button class="btn btn-book" data-room="deluxe" data-type="hotel"
+                data-name="Chambre Deluxe">Réserver</button>
+            </div>
+          </div>
+
+
+
+
+
+        </div>
+
+        <!-- PREMIUM -->
+        <div class="room-content room__premium active">
+
+          <div class="img__premium"></div>
+
+          <div class="text__premium">
+            <h2>Premium </h2>
+
+            <p>
+              Expérience ultime du batiment.
+              Une suite luxueuse avec vue panoramique imprenable
+            </p>
+
+            <ul class="room__features">
+              <li>Wi-Fi gratuit</li>
+              <li>Climatisation</li>
+              <li>Smart TV</li>
+              <li>Petit-déjeuner inclus</li>
+              <li>service premium</li>
+              <li>salon privé</li>
+            </ul>
+
+
+            <div class="price__premium">
+              <h3 class="room__price">
+                100.000 Ar <span>/nuit</span>
+              </h3>
+              <button class="btn btn-book" data-room="premium" data-type="hotel"
+                data-name="Chambre Premium">Réserver</button>
+            </div>
+          </div>
+
+
+
+        </div>
+
+      </div>
+    </section>
+    <section class="services hidden">
+      <h3>Nos services & Équipements</h3>
+
+      <div class="services__container">
+        <div class="services__card">
+          <img src="./images/wifi.png" alt="" />
+          <h4>Wi-Fi gratuit</h4>
+          <p>Restez connecté avec notre Wi-Fi rapide et fiable.</p>
+        </div>
+
+        <div class="services__card">
+          <img src="./images/cafe.png" alt="" />
+          <h4>Chambres confortables</h4>
+          <p>Profitez d'un sommeil réparateur dans nos chambres bien aménagées.</p>
+        </div>
+
+        <div class="services__card">
+          <img src="./images/resto.png" alt="" />
+          <h4>Restaurant sur place</h4>
+          <p>Dégustez une cuisine délicieuse dans notre restaurant sur place.</p>
+        </div>
+
+        <div class="services__card">
+          <img src="./images/piscine.png" alt="" />
+          <h4>Piscine</h4>
+          <p>Détendez-vous et rafraîchissez-vous dans notre piscine.</p>
+        </div>
+
+        <div class="services__card">
+          <img src="./images/sport.png" alt="" />
+          <h4>Salle de sport</h4>
+          <p>Maintenez votre routine d'entraînement dans notre salle de sport bien équipée.</p>
+        </div>
+
+        <div class="services__card">
+          <img src="./images/parking.png" alt="" />
+          <h4>Parking sécurisé</h4>
+          <p>Profitez d'un parking sécurisé et pratique pour votre véhicule.</p>
+        </div>
+
+      </div>
+    </section>
+    <section class="note hidden" id="note">
+      <h6>Avis des clients</h6>
+      <div class="services__container">
+        <div class="services__card">
+
+
+          <h3>⭐⭐⭐⭐⭐</h3>
+          <p>Un séjour tout simplement exceptionnel.
+            L'accueil chaleureux, le service impeccable
+            et les installations de qualité ont rendu mon séjour inoubliable.
+            Je recommande vivement cet hôtel à tous ceux qui recherchent une expérience de luxe
+            et de confort à Antsirabe.
+          </p>
+          <h3>Lantoniaina harilala</h3>
+        </div>
+
+        <div class="services__card">
+
+          <h3>⭐⭐⭐⭐⭐</h3>
+
+          <p>J'ai séjourné dans cet hôtel
+            et j'ai été agréablement surpris par le niveau
+            de service et le confort des chambres.
+            Le resttaurant sur place est excellent et tres pratique après une journée d'exploration.</p>
+          <h3>Andrisoa Elodie</h3>
+        </div>
+        <div class="services__card">
+
+
+          <h3>⭐⭐⭐⭐</h3>
+          <p>Très bon accueil et service. Les chambres sont propres et confortables.Le Fitness Center est bien équipé.
+          </p>
+          <h3>Rasoanirina Fabiolah</h3>
+        </div>
+    </section>
+    <section class="box hidden" id="box">
+
+      <div class="box__card">
+
+        <div class="box__gallery">
+
+          <button class="gallery__btn prev">←</button>
+
+          <img id="gallery-image" class="gallery__image" src="./images/box1.png" alt="Box Premium">
+
+          <button class="gallery__btn next">→</button>
+
+        </div>
+
+        <div class="box__details">
+
+          <h2 class="box__name">
+            Box Premium
+          </h2>
+
+          <p class="box__description">
+            Emplacement stratégique idéal pour les commerces.
+          </p>
+
+          <ul class="box__features">
+            <li>Vitrine intégréé</li>
+            <li>Accès principal</li>
+            <li>Parking proche</li>
+            <li>Espace optimsé</li>
+          </ul>
+
+          <div class="box__footer">
+
+            <p class="box__price">
+              450.000 Ar <span>/ mois</span>
+            </p>
+
+            <button class="btn btn-book" data-room="box" data-type="box" data-name="Box">
+              Louer
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+    <section class="contact hidden" id="contact">
+
+      <div class="contact__header">
+
+        <h2>Contactez-nous</h2>
+      </div>
+
+      <div class="contact__container">
+
+        <div class="form__contact">
+
+          <form class="contact__form" id="contact-form">
+
+            <input type="text" name="name" placeholder="Votre nom" required>
+
+            <input type="email" name="email" placeholder="Votre email" required>
+
+            <textarea id="contact-message" name="message" placeholder="Votre message" required></textarea>
+
+            <button type="submit" class="btn btn-contact" style="background-color: #17264a;">
+              Envoyer
+            </button>
+
+          </form>
+          <div class="localisation__maps">
+            <!-- Google Maps -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.367638480848!2d47.033455974436954!3d-19.86669223633871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21e50ef413ec9e15%3A0x2c3ccfbc4d1c6ea7!2sHOTEL%20Z%26A!5e0!3m2!1sfr!2smg!4v1782060492489!5m2!1sfr!2smg"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <div class="contact__info">
+
+          <div class="contact__card">
+            <img src="./images/adress.png" alt="">
+            <h4>Adresse</h4>
+            <p>Antsirabe, Madagascar</p>
+          </div>
+
+          <div class="contact__card">
+            <img src="images/phone.png" alt="">
+            <h4>Téléphone</h4>
+            <p>+261 XX XX XXX XX</p>
+          </div>
+
+          <div class="contact__card">
+            <img src="./images/email.png" alt="">
+            <h4>Email</h4>
+            <p>contact@hotelza.com</p>
+          </div>
+
+          <div class="contact__card">
+            <img src="./images/horaire.png" alt="">
+            <h4>Ouvert</h4>
+            <p>24h/24 - 7j/7</p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,347 @@
+/* modern entry animations for page elements */
+:root {
+  --anim-duration: 0.9s;
+  --anim-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --anim-ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.hidden {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease;
+}
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.nav__logo,
+.nav__menu,
+.nav-toggle,
+.button-item,
+.btn-item,
+.presentation,
+.hotel__navigation,
+.hotel__content,
+.services,
+.note,
+.box__card,
+.contact__container {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: fadeInUp var(--anim-duration) var(--anim-ease) both;
+}
+
+.nav__logo {
+  animation-delay: 0.2s;
+}
+
+.nav__menu,
+.nav-toggle {
+  animation-delay: 0.3s;
+}
+
+.button-item,
+.btn-item {
+  animation-delay: 0.35s;
+}
+
+.presentation {
+  animation-delay: 0.25s;
+}
+
+.hotel__navigation {
+  animation-delay: 0.35s;
+}
+
+.hotel__content {
+  animation-delay: 0.45s;
+}
+
+.services,
+.note,
+.box__card,
+.contact__container {
+  animation-delay: 0.5s;
+}
+
+.text__principale,
+.text__premium,
+.box__details,
+.contact__form {
+  animation: textReveal 1.05s var(--anim-ease) both;
+}
+
+.text__principale {
+  animation-delay: 0.4s;
+}
+
+.btn,
+.btn-room,
+.btn-box,
+.btn-book,
+.gallery__btn,
+.room__card,
+.services__card,
+.contact__card {
+  animation: popIn 0.8s var(--anim-ease-soft) both;
+}
+
+.btn,
+.btn-room,
+.btn-box,
+.btn-book,
+.gallery__btn {
+  animation-delay: 0.5s;
+}
+
+.room__card {
+  animation-delay: 0.4s;
+}
+
+.room__card.active {
+  animation: highlightPulse 1.8s ease 0.4s infinite alternate;
+}
+
+.services__card,
+.contact__card,
+.room-content {
+  animation-delay: 0.45s;
+}
+
+.gallery__image {
+  animation: imageFloat 8s ease-in-out infinite alternate;
+}
+
+.room-content.active {
+  animation: revealContent 0.95s var(--anim-ease) both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes highlightPulse {
+  from {
+    box-shadow: 0 0 0 rgba(23, 38, 74, 0.18);
+    transform: translateY(0) scale(1);
+  }
+  to {
+    box-shadow: 0 16px 32px rgba(23, 38, 74, 0.12);
+    transform: translateY(-2px) scale(1.01);
+  }
+}
+
+@keyframes imageFloat {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-8px) scale(1.01);
+  }
+}
+
+@keyframes revealContent {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/*navigation */
+.nav__toggle,
+.nav__close,
+.hotel__mobile-nav{
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+  .button-item {
+    display: none;
+  }
+  
+
+  .nav__menu{
+    position: fixed;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    background: #162447;
+
+    display: flex;
+    justify-content: space-around;
+
+    padding: 1rem;
+
+    z-index: 1000;
+  }
+
+
+
+  .nav__toggle {
+    display: block;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    padding: 3rem 1.5rem;
+    background: rgba(23, 38, 74, 0.95);
+    box-shadow: -12px 0 30px rgba(0, 0, 0, .35);
+    transition: right .4s ease, opacity .4s ease, visibility .4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+  }
+
+  .show-menu {
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 4rem;
+    width: 100%;
+  }
+
+  .nav__link {
+    color: #fff;
+    font-size: 1.1rem;
+    text-align: left;
+    padding: 0.9rem 1rem;
+    border-radius: 12px;
+    transition: background .3s ease, transform .3s ease;
+  }
+
+  .nav__link:hover {
+    background: rgba(255, 255, 255, .08);
+    transform: translateX(4px);
+  }
+
+  .nav__close {
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+  }
+  .hotel__navigation {
+    display: none;
+  }
+    .hotel__mobile-nav{
+    display:block;
+    margin:2rem 0;
+  }
+
+  .hotel__mobile-nav select{
+    width:100%;
+    padding:1rem;
+
+    border:none;
+    border-radius:10px;
+
+    background:#162447;
+    color:white;
+
+    font-size:1rem;
+  }
+   .room-content.active {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+    .img__premium,
+  .img__deluxe,
+  .img__standard {
+    width: 100%;
+    height: 250px;
+
+    background-size: cover;
+    background-position: center;
+  }
+
+
+  .text__premium,
+  .text__deluxe,
+  .text__standard {
+    text-align: center;
+  }
+
+}

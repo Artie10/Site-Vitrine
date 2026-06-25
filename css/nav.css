@@ -1,0 +1,87 @@
+.nav__menu {
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  height: 80px;
+}
+
+.nav__logo {
+  color: white;
+  text-decoration: none;
+  display: inline;
+}
+
+.nav__logo img {
+  width: 50px;
+}
+
+.logo-text h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #1f2a44;
+}
+
+.logo-text span {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  color: #888;
+}
+.nav__list {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav__link:hover {
+  color: #c89b5d;
+}
+
+.button-item {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-box {
+  background: #c89b5d;
+  color: white;
+  border: none;
+}
+.btn-room {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.btn-room:hover {
+  background-color: hsl(0, 9%, 90%);
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+}

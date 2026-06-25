@@ -1,0 +1,319 @@
+.hotel__section {
+  min-height: 100vh;
+  padding-top: 100px;
+
+  background-image:
+    linear-gradient(rgba(10, 15, 35, 0.6), rgba(10, 15, 35, 0.6)),
+    url("../images/chambre.png");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 0 5rem;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .hotel__section {
+    padding: 0 3rem;
+    background-position: center top;
+  }
+
+  .presentation h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .hotel__section {
+    padding: 0 2rem;
+  }
+
+  .presentation {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 4rem 0 2rem;
+  }
+
+  .presentation h2 {
+    font-size: 2.4rem;
+  }
+
+  .presentation p {
+    max-width: 100%;
+    font-size: 1.05rem;
+  }
+
+  .hotel__navigation {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .room__card {
+    height: auto;
+    padding: 1.2rem;
+  }
+
+  .room-content.active {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .img__premium,
+  .img__deluxe,
+  .img__standard {
+    height: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hotel__section {
+    padding: 0 1rem;
+  }
+
+  .presentation h2 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .presentation h1 span,
+  .presentation h2 span {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+  }
+
+  .presentation p {
+    font-size: 1rem;
+  }
+
+  .room__price {
+    font-size: 2.2rem;
+  }
+
+  .price__premium .btn-book {
+    padding: 0.8rem 1.2rem;
+  }
+}
+
+/*presentation*/
+.presentation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 6rem 0 4rem;
+  gap: 4rem;
+}
+
+.presentation h2 {
+  flex: 1;
+
+  font-size: 4rem;
+  line-height: 1.1;
+  font-weight: 600;
+
+  color: #fff9f9;
+}
+.presentation h2 span {
+  display: block;
+  color: #c89b5d;
+}
+
+.presentation h1 span {
+  display: block;
+
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+
+  color: #c89b5d;
+  margin-bottom: 1.5rem;
+}
+
+.presentation p {
+  flex: 1;
+
+  max-width: 550px;
+
+  font-size: 1.2rem;
+  line-height: 1.8;
+
+  color: #f1efef;
+}
+
+/*boutton navigation*/
+.hotel__navigation {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.room__card {
+  padding: 2rem;
+  background: white;
+  cursor: pointer;
+  height: 200px;
+  border-right: 1px solid #ddd;
+}
+.room__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.room__card.active {
+  background: #17264a;
+  color: white;
+}
+
+.room__number {
+  font-size: 0.9rem;
+  color: #7a7a7a;
+  letter-spacing: 2px;
+}
+.room__type {
+  border: 1px solid #d8d8d8;
+  padding: 0.5rem 1rem;
+
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+
+  color: #666;
+}
+.room__card h3 {
+  margin-top: 2rem;
+
+  font-size: 2rem;
+  font-weight: 600;
+
+  color: #111;
+}
+.room__card p {
+  margin-top: 0.8rem;
+
+  font-size: 1rem;
+  color: #7a7a7a;
+}
+.room__price {
+  margin-top: 3rem;
+
+  font-size: 3rem;
+  font-weight: 60;
+
+  color: #c89b5d;
+}
+.room__price span {
+  font-size: 1.2rem;
+  color: #7a7a7a;
+}
+.room-content {
+  display: none;
+}
+
+.room-content.active {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+
+  margin-top: 3rem;
+  align-items: center;
+}
+
+/* Page premium */
+.img__premium {
+  height: 550px;
+
+  background-image: url("../images/chambre.png");
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 10px;
+}
+
+.img__deluxe {
+  height: 550px;
+
+  background-image: url("../images/deluxe.png");
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 10px;
+}
+.img__standard {
+  height: 550px;
+
+  background-image: url("../images/premium.png");
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 10px;
+}
+.text__premium {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.text__premium h2 {
+  font-size: 3rem;
+  font-weight: 600;
+
+  color: #fcf7f7;
+}
+.text__premium p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+
+  color: #eeecec;
+}
+.price__premium {
+  margin-top: 2rem;
+
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.btn-book {
+  background: #787c86;
+
+  color: rgb(14, 12, 12);
+
+  padding: 1rem 2rem;
+
+  border: none;
+
+  cursor: pointer;
+}
+.room__features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 1.5rem 3rem;
+
+  margin: 2rem 0;
+
+  padding: 0;
+
+  list-style: none;
+}
+.room__features li {
+  position: relative;
+
+  padding-left: 1.5rem;
+
+  color: #dbd6d6;
+
+  font-size: 1rem;
+}
+.room__features li::before {
+  content: "✓";
+
+  position: absolute;
+  left: 0;
+
+  color: #c89b5d;
+  font-weight: bold;
+}

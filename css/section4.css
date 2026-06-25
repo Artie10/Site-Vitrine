@@ -1,0 +1,33 @@
+/* Section Note Styles */
+.note {
+    padding: 60px 20px;
+    background: url('../images/equipement.png') center/cover no-repeat;
+    text-align: center;
+    position: relative;
+}
+.note h6 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+    color: #fdfdfd;
+}
+.note::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+ 
+  pointer-events: none;
+}
+
+.note strong {
+  color: #1c1c1c;
+  display: block;
+  margin-bottom: 0.5em;
+  font-size: 1.05rem;
+}
+
+.note p {
+  margin: 0;
+  line-height: 1.8;
+  z-index: 1;
+}
