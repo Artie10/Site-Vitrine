@@ -215,7 +215,14 @@
   .button-item {
     display: none;
   }
+  .contact__container {
+  display: block;
+  grid-template-columns: 2fr 1fr;
+
+  gap: 3rem;
   
+  margin-top: 4rem;
+}
 
   .nav__menu{
     position: fixed;
