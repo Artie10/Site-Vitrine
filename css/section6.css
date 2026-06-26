@@ -15,7 +15,7 @@
 }
 
 .contact__container {
-  display: grid;
+   display:block !important;
   grid-template-columns: 2fr 1fr;
 
   gap: 3rem;
